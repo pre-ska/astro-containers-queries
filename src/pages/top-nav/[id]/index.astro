@@ -1,5 +1,6 @@
 ---
 import Layout from "../../_components/Layout.astro"
+import ProductGrid from "../../_components/ProductGrid.astro"
 import products from "../../../products"
 
 const { id } = Astro.params
@@ -14,4 +15,5 @@ export function getStaticPaths() {
     <a href="/">Home</a> |
     <a href={`/left-nav/${id}`}>Switch To Left Navigation</a>
   </div>
+  <ProductGrid id={id} pagePrefix="top-nav" />
 </Layout>

@@ -24,9 +24,9 @@ export default [
     name: "Man's Shirt",
     src: "/assets/man-shirt-1.jpg",
   },
-  {
-    id: "man-shirt-2",
-    name: "Man's Shirt",
-    src: "/assets/man-shirt-2.jpg",
-  },
+  // {
+  //   id: "man-shirt-2",
+  //   name: "Man's Shirt",
+  //   src: "/assets/man-shirt-2.jpg",
+  // },
 ]
