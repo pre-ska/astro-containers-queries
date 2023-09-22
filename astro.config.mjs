@@ -1,8 +1,11 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config"
 
-import tailwind from "@astrojs/tailwind";
+import tailwind from "@astrojs/tailwind"
 
-// https://astro.build/config
+import { defineConfig } from "astro/config"
+
 export default defineConfig({
-  integrations: [tailwind()]
-});
+  integrations: [tailwind()],
+  site: "https://pre-ska.github.io",
+  base: "/astro-containers-queries",
+})
