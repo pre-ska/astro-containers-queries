@@ -1,26 +1,10 @@
 ---
-import { Cloudinary } from "@cloudinary/url-gen"
-import { pad } from "@cloudinary/url-gen/actions/resize"
-
-const cld = new Cloudinary({
-  cloud: {
-    cloudName: import.meta.env.CLOUDINARY_CLOUD_NAME,
-  },
-})
-
 const { src, alt, width, height, crop, className, active } = {
-  width: 600,
-  height: 600,
+  width: 300,
+  height: 300,
   crop: "fit",
   ...Astro.props,
 }
-
-const url = cld
-  .image(src)
-  .resize(pad().width(width).height(height))
-  .format("auto")
-  .quality("auto")
-  .toURL()
 ---
 
-<img src={url} alt={alt} width={width} height={height} class={className} />
+<img src={src} alt={alt} width={width} height={height} class={className} />

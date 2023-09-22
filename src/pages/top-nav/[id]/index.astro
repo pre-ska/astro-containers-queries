@@ -1,0 +1,17 @@
+---
+import Layout from "../../_components/Layout.astro"
+import products from "../../../products"
+
+const { id } = Astro.params
+
+export function getStaticPaths() {
+  return products.map(({ id }) => ({ params: { id } }))
+}
+---
+
+<Layout title="Product list with nav on top">
+  <div class="text-white">
+    <a href="/">Home</a> |
+    <a href={`/left-nav/${id}`}>Switch To Left Navigation</a>
+  </div>
+</Layout>

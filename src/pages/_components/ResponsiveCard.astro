@@ -5,7 +5,15 @@ const { src, alt, active } = Astro.props
 
 <div class="flex flex-col @lg:flex-row">
   <div class="@lg:w-1/2">
-    <CloudImage src={src} alt={alt} active={active} className="rounded-t-2xl" />
+    <CloudImage src={src} alt={alt} active={active} className="visible @lg:hidden rounded-t-2xl" />
+    <CloudImage
+      width={600}
+      height={600}
+      src={src}
+      alt={alt}
+      active={active}
+      className="hidden @lg:block object-cover rounded-l-2xl"
+    />
   </div>
   <div
     class="rounded-b-2xl border-2 border-t-0 border-gray-900 bg-black p-2 text-white @lg:w-1/2 @lg:rounded-bl-none @lg:rounded-tr-2xl @lg:border-l-0 @lg:border-t-2 @lg:p-5"
