@@ -1,6 +1,36 @@
- 
 ---
 import Layout from "./_components/Layout.astro"
+import ResponsiveCard from "./_components/ResponsiveCard.astro"
 ---
 
-<Layout>Hello world</Layout> 
+<Layout>
+  <div class="max-w-sm @container">
+    <ResponsiveCard
+      src="https://res.cloudinary.com/dvoswzil3/image/upload/v1694797595/bygqp8nbp5qbc9iidulf.jpg"
+      alt="dog jacket"
+      active
+    >
+      <h1 class="text-md font-bold @lg:text-3xl">Dog Jacket</h1>
+    </ResponsiveCard>
+  </div>
+
+  <div class="mt-5 max-w-lg @container">
+    <ResponsiveCard
+      src="https://res.cloudinary.com/dvoswzil3/image/upload/v1694797595/bygqp8nbp5qbc9iidulf.jpg"
+      alt="dog jacket"
+      active
+    >
+      <h1 class="text-md font-bold @lg:text-3xl">Dog Jacket</h1>
+    </ResponsiveCard>
+  </div>
+
+  <div class="mt-5 @container">
+    <ResponsiveCard
+      src="https://res.cloudinary.com/dvoswzil3/image/upload/v1694797595/bygqp8nbp5qbc9iidulf.jpg"
+      alt="dog jacket"
+      active
+    >
+      <h1 class="text-md font-bold @lg:text-3xl">Dog Jacket</h1>
+    </ResponsiveCard>
+  </div>
+</Layout>
