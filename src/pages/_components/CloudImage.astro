@@ -1,8 +1,13 @@
 ---
-const { src, alt, width, height, crop, className, active } = {
+const {
+  src = "",
+  alt = "",
+  width,
+  height,
+  className = "",
+} = {
   width: 300,
   height: 300,
-  crop: "fit",
   ...Astro.props,
 }
 ---
