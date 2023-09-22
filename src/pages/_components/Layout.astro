@@ -14,5 +14,21 @@ const { title } = Astro.props
   </head>
   <body class="mx-auto max-w-5xl bg-black py-5 text-white">
     <slot />
-  </body>
+  </body><style>
+    @import "open-props/animations";
+    @import "open-props/easings";
+
+    ::view-transition-group(*) {
+      animation-timing-function: var(--ease-squish-1);
+      animation-timing-function: var(--ease-in-out-4);
+    }
+
+    ::view-transition-old(*) {
+      animation-duration: 0.1s;
+    }
+
+    ::view-transition-new(*) {
+      animation-duration: 0.5s;
+    }
+  </style>
 </html>
